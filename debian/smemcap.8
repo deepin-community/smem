@@ -1,0 +1,60 @@
+.TH SMEMCAP 8 "17/06/2013" "" ""
+
+.SH NAME
+smemcap \- Capture memory usage data for later processing by smem.
+
+.SH SYNOPSIS
+.B smemcap
+
+.SH DESCRIPTION
+\fBsmemcap\fP captures data on system to be later processed by \fBsmem\fP.
+It captures all /proc entries required by \fBsmem\fP and outputs them as an
+uncompressed .tar file to STDOUT.
+
+\fBsmem\fP can analyze the output using the \fB\-\-source\fP option.
+\fBsmemcap\fP is small and does not require Python.
+
+.SH OPTIONS
+
+This program does not accept any options.
+
+.SH EXAMPLE
+
+.br
+smemcap > memorycapture.tar
+
+.SH FILES
+.I /proc/$pid/cmdline
+.PP
+.I /proc/$pid/smaps
+.PP
+.I /proc/$pid/stat
+.PP
+.I /proc/meminfo
+.PP
+.I /proc/version
+
+.SH RESOURCES
+Main Web Site: http://www.selenic.com/smem
+
+Source code repository: http://selenic.com/repo/smem
+
+Mailing list: http://selenic.com/mailman/listinfo/smem
+
+.SH "SEE ALSO"
+.BR smem (8),
+.BR free (1),
+.BR pmap (1),
+.BR proc (5),
+.BR ps (1),
+.BR top (1),
+.BR vmstat (8)
+
+.SH COPYING
+Copyright (C) 2008-2009 Matt Mackall.  Free use of this software
+is granted under the terms of the GNU General Public License
+version 2 or later.
+
+.SH AUTHOR
+\fBsmem\fP was written by Matt Mackall.
+

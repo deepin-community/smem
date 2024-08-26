@@ -1,15 +1,42 @@
-Source: template-repository
-Section: unknown
+Source: smem
+Section: utils
 Priority: optional
-Maintainer: Tsic404 <liuheng@deepin.org>
-Build-Depends: debhelper (>= 11)
-Standards-Version: 4.1.3
-Homepage: https://github.com/deepin-community/template-repository
-#Vcs-Browser: https://salsa.debian.org/debian/deepin-community-template-repository
-#Vcs-Git: https://salsa.debian.org/debian/deepin-community-template-repository.git
+Maintainer: Debian Python Team <team+python@tracker.debian.org>
+Uploaders: Michal Čihař <nijel@debian.org>,
+Build-Depends:
+ debhelper-compat (= 13),
+ python3,
+ dh-sequence-python3,
+Rules-Requires-Root: no
+Standards-Version: 3.9.6
+Vcs-Git: https://salsa.debian.org/python-team/packages/smem.git
+Vcs-Browser: https://salsa.debian.org/python-team/packages/smem
+Homepage: https://www.selenic.com/smem/
 
-Package: template-repository
+Package: smem
+Architecture: all
+Depends: ${shlibs:Depends}, ${python3:Depends}, ${misc:Depends}
+Recommends: python3-matplotlib
+Multi-Arch: foreign
+Description: memory reporting tool
+ Tool that can give numerous reports on memory usage on Linux systems.
+ Unlike existing tools, smem can report proportional set size (PSS),
+ which is a more meaningful representation of the amount of memory used
+ by libraries and applications in a virtual memory system.
+ .
+ This package contains main tool which can also process data collected
+ by smemcap.
+
+Package: smemcap
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Depends: ${shlibs:Depends}, ${python3:Depends}, ${misc:Depends}
+Description: data collection tool for memory reporting
+ Tool that can give numerous reports on memory usage on Linux systems.
+ Unlike existing tools, smem can report proportional set size (PSS),
+ which is a more meaningful representation of the amount of memory used
+ by libraries and applications in a virtual memory system.
+ .
+ This package contains smemcap utility, which can be used to collect
+ data on resource constrained systems without depending on Python.
+ .
+ The captured data can be processed by smem program.

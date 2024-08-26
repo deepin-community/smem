@@ -1,5 +1,140 @@
-template-repository (1.0-1) unstable; urgency=medium
+smem (1.5-3) unstable; urgency=medium
 
-  * Initial release
+  * Team Upload
+  * Set DPT as Maintainer per new Team Policy
+  * Use new dh-sequence-python3
+  * Set Rules-Requires-Root: no
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+  [ Debian Janitor ]
+  * Remove constraints unnecessary since buster:
+    + Build-Depends: Drop versioned constraint on dpkg-dev.
+    + smem: Drop versioned constraint on secure-delete in Conflicts.
+    + smemcap: Drop versioned constraint on smem in Replaces.
+    + smemcap: Drop versioned constraint on smem in Breaks.
+  * Use secure URI in Homepage field.
+  * Bump debhelper from deprecated 9 to 13.
+  * Apply multi-arch hints. + smem: Add Multi-Arch: foreign.
+
+ -- Alexandre Detiste <tchet@debian.org>  Thu, 22 Aug 2024 18:24:43 +0200
+
+smem (1.5-2) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * d/control: Update Vcs-* fields with new Debian Python Team Salsa
+    layout.
+
+  [ Sandro Tosi ]
+  * Use the new Debian Python Team contact name and address
+
+ -- Sandro Tosi <morph@debian.org>  Sun, 17 Apr 2022 22:58:17 -0400
+
+smem (1.5-1.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Add patch from Marco Paganini for Python 3 incompatibility
+    in "smem --bar". (Closes: #958129)
+
+ -- Adrian Bunk <bunk@debian.org>  Sat, 17 Jul 2021 22:47:50 +0300
+
+smem (1.5-1) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * d/control: Deprecating priority extra as per policy 4.0.1
+  * d/changelog: Remove trailing whitespaces
+  * d/control: Remove trailing whitespaces
+  * d/control: Remove ancient X-Python-Version field
+  * Use debhelper-compat instead of debian/compat.
+
+  [ Sandro Tosi ]
+  * New upstream release; Closes: #888098, #931119
+  * Switch to python3; Closes: #938505
+
+ -- Sandro Tosi <morph@debian.org>  Sat, 04 Jan 2020 22:57:10 -0500
+
+smem (1.4-2) unstable; urgency=medium
+
+  * Adjust Vcs-Svn URL.
+  * Bump standards to 3.9.6.
+
+ -- Michal Čihař <nijel@debian.org>  Mon, 06 Oct 2014 09:32:59 +0200
+
+smem (1.4-1) unstable; urgency=low
+
+  * New upstream release.
+  * Bump standards to 3.9.5.
+
+ -- Michal Čihař <nijel@debian.org>  Mon, 09 Dec 2013 18:44:41 +0100
+
+smem (1.3-3) unstable; urgency=low
+
+  * Add missing conflicts after package split (Closes: #717291).
+
+ -- Michal Čihař <nijel@debian.org>  Wed, 24 Jul 2013 16:01:41 +0200
+
+smem (1.3-2) unstable; urgency=low
+
+  * Bump standards to 3.9.4.
+  * Use debhelper 9.
+  * Properly use CPPFLAGS while compiling helper.
+  * Split smemcap utility to separate package (to allow installation on
+    embedded systems).
+  * Adjust manpage to reference smemcap package (LP: #1079856).
+
+ -- Michal Čihař <nijel@debian.org>  Mon, 17 Jun 2013 09:57:12 +0200
+
+smem (1.3-1) unstable; urgency=low
+
+  [ Jakub Wilk ]
+  * Use canonical URIs for Vcs-* fields.
+
+  [ Michal Čihař ]
+  * New upstream release.
+    - Fixes -S (Closes: #701007).
+
+ -- Michal Čihař <nijel@debian.org>  Tue, 07 May 2013 11:05:04 +0200
+
+smem (1.2-1) unstable; urgency=low
+
+  * New upstream release (Closes: #692021).
+  * Build and install smemcap (Closes: #692020).
+  * Bump standards to 3.9.3.
+  * Fix - used in manpages.
+
+ -- Michal Čihař <nijel@debian.org>  Thu, 01 Nov 2012 14:17:11 +0100
+
+smem (1.0-1) unstable; urgency=low
+
+  * New upstream version.
+  * All patches intergrated upstream.
+  * Switch to dh_python2.
+
+ -- Michal Čihař <nijel@debian.org>  Mon, 21 Feb 2011 11:07:59 +0100
+
+smem (0.9-4) unstable; urgency=low
+
+  * Build depend on Python (Closes: #611589).
+  * Bump standards to 3.9.1.
+
+ -- Michal Čihař <nijel@debian.org>  Mon, 31 Jan 2011 09:33:56 +0100
+
+smem (0.9-3) unstable; urgency=low
+
+  * Relax conflict with secure-delete to older versions as 3.1-5 has renamed
+    smem binary.
+
+ -- Michal Čihař <nijel@debian.org>  Wed, 06 Jan 2010 09:58:42 +0100
+
+smem (0.9-2) unstable; urgency=low
+
+  * Use bash for capture example, it uses bashisms which are not easy to
+    avoid.
+  * Add conflict with secure-delete which also provides smem binary
+    (Closes: #562228).
+
+ -- Michal Čihař <nijel@debian.org>  Sat, 02 Jan 2010 12:33:45 +0100
+
+smem (0.9-1) unstable; urgency=low
+
+  * Initial release (Closes: #562179).
+
+ -- Michal Čihař <nijel@debian.org>  Wed, 23 Dec 2009 15:23:41 +0100
