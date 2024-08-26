@@ -1,0 +1,4 @@
+manpage.patch
+buildsystem.patch
+smem-py3k.patch
+smem-xrange-fix.patch
