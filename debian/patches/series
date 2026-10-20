@@ -5,3 +5,4 @@ smem-xrange-fix.patch
 gdh-bugfixes.patch
 gdh-name-comm-widths.patch
 gdh-smaps-rollup.patch
+gdh-extra-columns.patch
