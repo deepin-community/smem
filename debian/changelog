@@ -1,4 +1,4 @@
-smem (1.5-4) unstable; urgency=medium
+smem (1.5-3deepin1) unstable; urgency=medium
 
   * Fix the mapping AVGUSS column, report real VSS in the user view,
     ignore packed kernel images for -K, and decode smemcap tarballs
